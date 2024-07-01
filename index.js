@@ -7,10 +7,11 @@ app.listen(PORT, () => {
 // Exercise 1: Multiply All Numbers in an Array
 let numbers = [1, 2, 3, 4, 5];
 function multiplyNumber(numbers, multiplier) {
+  let updatedArray = [];
   for (let i = 0; i < numbers.length; i++) {
-    numbers[i] = numbers[i] * multiplier;
+    updatedArray[i] = numbers[i] * multiplier;
   }
-  return numbers;
+  return updatedArray;
 }
 app.get("/numbers/multiply", (req, res) => {
   let multiplier = parseFloat(req.query.multiplier);
